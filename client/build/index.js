@@ -4,7 +4,7 @@ import { StdioClientTransport } from "@modelcontextprotocol/sdk/client/stdio.js"
 import readline from "readline/promises";
 import dotenv from "dotenv";
 dotenv.config(); // load environment variables from .env
-const ANTHROPIC_API_KEY = "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";
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 if (!ANTHROPIC_API_KEY) {
     throw new Error("ANTHROPIC_API_KEY is not set");
 }
