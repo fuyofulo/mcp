@@ -59,7 +59,7 @@ class MCPClient {
 
       // List available tools
       const toolsResult = await this.mcp.listTools();
-      this.tools = toolsResult.tools.map((tool) => {
+      this.tools = toolsResult.tools.map((tool: any) => {
         return {
           name: tool.name,
           description: tool.description,
